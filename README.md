@@ -10,3 +10,11 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+#TEST PARA NPM
+    - npm install --save-dev jest
+    - npm install --save-dev babel-jest @babel/core @babel/preset-env
+    - npm install whatwg-fetch
+    - npm install jest-environment-jsdom
+    - npm install @types/prop-types
