@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test GifItem Debe enviar title y url + snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="DBZ"
+      src="https://damndemo.com.ar/favicon.jpg"
+    />
+    <p>
+       
+      DBZ
+       
+    </p>
+  </div>
+</div>
+`;

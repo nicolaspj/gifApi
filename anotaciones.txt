@@ -1,2 +1,2 @@
-use http-server -o para desplegar la app en produccion de manera local
+        use http-server -o para desplegar la app en produccion de manera local
         sudo apt install node-http-server

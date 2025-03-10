@@ -1,5 +1,7 @@
 //insertamos los gifs
 
+import PropTypes from "prop-types"
+
 export const GiftItem = ({ title, url , id }) => {
     
     return (
@@ -8,4 +10,9 @@ export const GiftItem = ({ title, url , id }) => {
         <p> { title } </p>
     </div>
   )
+}
+//testting
+GiftItem.prototype = {
+  title: PropTypes.string.isRequired,
+  url  : PropTypes.string.isRequired,
 }
