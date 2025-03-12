@@ -14,6 +14,40 @@ describe('Prueba AddCategory', () => {
         //screen.debug();
     })
 
+    test('debe de llamar onNewCategory si el input tiene un valor', () => { 
+
+        const inputValue = 'Bleach';
+        const onNewCategory = jest.fn();
+
+        render( <AddCategory onNewCategory={ onNewCategory } />);
+
+        const input = screen.getByRole('textbox');
+        const form = screen.getByRole('form');
+
+        fireEvent.input( input , { target: {value : inputValue} })
+        fireEvent.submit( form );
+        // screen.debug();
+        expect(input.value).toBe('')
+
+        expect( onNewCategory ).toHaveBeenCalled();
+        expect( onNewCategory ).toHaveBeenCalledTimes(1);
+        expect( onNewCategory ).toHaveBeenCalledWith( inputValue );
+     })
     
+     test('no debe de llamar onNewCategory si el input esta vacio', () => { 
+
+        const onNewCategory = jest.fn();
+
+        render( <AddCategory onNewCategory={ onNewCategory } />);
+
+        const form = screen.getByRole('form');
+        fireEvent.submit(form)
+        expect( onNewCategory ).toHaveBeenCalledTimes( 0 );
+        expect( onNewCategory ).not.toHaveBeenCalled(  );
+        //en caso de que en addCategory en la parte de submit
+        // en la parte de if (inputValue.trim etc este comentada o no se pase
+        // este dara error//
+        
+     })
  })
 
